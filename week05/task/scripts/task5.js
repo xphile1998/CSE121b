@@ -160,7 +160,7 @@ const sortBy = () => {
       break;
     default:
       output(templeList.sort(
-        (temple1, temple2) =>{
+        (temple1, temple2) => {
           if (temple1.templeName.toLowerCase() > temple2.templeName.toLowerCase()) return 1;
           else if (temple1.templeName.toLowerCase() > temple2.templeName.toLowerCase()) return -1;
           else return 0;
