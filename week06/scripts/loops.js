@@ -19,6 +19,24 @@ myInfo = {
       },
     ],
   };
+
+  const foodsItem = document.querySelector("#favorite-foods");
+  function groupFoodItem(food) {
+    let favoriteFood = document.createElement('li');
+    favoriteFood.textContent = food;
+    foodsItem.appendChild(favoriteFood);
+  }
+  myInfo.favoriteFoods.forEach(groupFoodItem);
+
+  const foodsItem2 = document.querySelector("#favorite-foods");
+  function groupFoodItem2(food) {
+    let favoriteFood2 = document.createElement('li');
+    favoriteFood2.textContent = food;
+    return favoriteFood2;
+  }
+  myInfo.favoriteFoods.map(groupFoodItem); 
+
+  /*
   // Step 4: For each favorite food in the favoriteFoods property, create an HTML <li> element and place its value in the <li> element
   let favoriteFood1 = document.createElement("li");
   favoriteFood1.textContent = myInfo.favoriteFoods[0];
@@ -37,4 +55,4 @@ myInfo = {
   document.querySelector("#favorite-foods").appendChild(favoriteFood2);
   document.querySelector("#favorite-foods").appendChild(favoriteFood3);
   document.querySelector("#favorite-foods").appendChild(favoriteFood4);
-  
+*/
