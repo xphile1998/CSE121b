@@ -1,8 +1,6 @@
-
-
 window.addEventListener('load', app);
 
-let gameBoard = ['', '', '', '', '', '', '', '', '']; 
+let gameBoard = ['1', '2', '3', '4', '5', '6', '7', '8', '9']; 
 let turn = 0; // Keeps track if X or O player's turn
 let winner = false;
 
@@ -17,7 +15,7 @@ const player = (name) => {
 
  // INITIALIZE APP
 function app() {
-  let inputField = document.querySelector('.input_field').focus();
+  // let inputField = document.querySelector('.input_field').focus();
 
   const addPlayerForm = document.getElementById('get_players');
   addPlayerForm.addEventListener('submit', addPlayers);
@@ -103,7 +101,7 @@ function makeMove(event) {
 
 function checkIfTie() {
   if (turn > 7) {
-    alert('game over a tie')
+    alert('game over a tie');
   }
 }
 
@@ -129,7 +127,6 @@ function isWinner() {
       gameBoard[cell3] === currentPlayer()
     ) {
 
-      
       const cells = document.querySelectorAll('.board_square');
       let letterId1 = document.querySelector(`[data-id='${cell1}']`);
       let letterId2 = document.querySelector(`[data-id='${cell2}']`);
@@ -191,7 +188,7 @@ function changeBoardHeaderNames() {
 function resetBoard() {
   console.log('resetting');
   
-  gameBoard = ['', '', '', '', '', '', '', '', '']; 
+  gameBoard = ['1', '2', '3', '4', '5', '6', '7', '8', '9']; 
   
   let cellToAddToken = document.querySelectorAll('.letter');
   cellToAddToken.forEach( square => {
